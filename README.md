@@ -1,6 +1,6 @@
 # Remove-GitHubWorkflowRuns
 
-PowerShell script that deletes old (or all) GitHub Actions workflow runs from a repository using the [GitHub CLI](https://cli.github.com/).
+Deletes old GitHub Actions workflow runs from a repository via the [GitHub CLI](https://cli.github.com/).
 
 ## Requirements
 
@@ -18,15 +18,15 @@ By default this deletes runs older than **7 days**, after an interactive confirm
 
 ## Parameters
 
-| Parameter   | Required | Default | Description |
-|-------------|----------|---------|-------------|
-| `-Owner`    | Yes      | —       | Repository owner (user or org) |
-| `-Repo`     | Yes      | —       | Repository name |
-| `-Days`     | No       | `7`     | Delete runs older than this many days |
-| `-All`      | No       | off     | Delete every workflow run (ignores `-Days`) |
+| Parameter   | Required | Default | Description                                             |
+| ----------- | -------- | ------- | ------------------------------------------------------- |
+| `-Owner`    | Yes      | —       | Repository owner (user or org)                          |
+| `-Repo`     | Yes      | —       | Repository name                                         |
+| `-Days`     | No       | `7`     | Delete runs older than this many days                   |
+| `-All`      | No       | off     | Delete every workflow run (ignores `-Days`)             |
 | `-Parallel` | No       | `0`     | Concurrent jobs (`0` = sequential, `2`–`10` = parallel) |
-| `-Force`    | No       | off     | Skip the confirmation prompt |
-| `-WhatIf`   | No       | off     | Show what would be deleted without deleting |
+| `-Force`    | No       | off     | Skip the confirmation prompt                            |
+| `-WhatIf`   | No       | off     | Show what would be deleted without deleting             |
 
 ## Examples
 
