@@ -3,9 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 [![Cursor](https://img.shields.io/badge/Cursor-IDE-141414?logo=cursor&logoColor=white&style=flat-square)](https://cursor.com)
 
-Deletes old GitHub Actions workflow runs from a repository via the [GitHub CLI](https://cli.github.com/).
+Old GitHub Actions runs pile up. This script deletes them through the [GitHub CLI](https://cli.github.com/) so a busy repo does not keep years of green checkmarks around.
 
-Needs PowerShell 7+ (`pwsh`) and an authenticated `gh` (`repo` / Actions write).
+Needs PowerShell 7+ (`pwsh`) and `gh` already logged in. The token needs permission to delete Actions workflow runs.
 
 ```powershell
 pwsh ./Remove-GitHubWorkflowRuns.ps1 -Owner myorg -Repo myrepo
